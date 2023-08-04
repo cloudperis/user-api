@@ -76,7 +76,7 @@ pipeline {
         }
     }
 
-    post {
+    /*post {
         always {
             steps{
             script{
@@ -90,7 +90,7 @@ pipeline {
             }
             }  
         }
-    }
+    }*/
 }
 
 def getJarName() {
