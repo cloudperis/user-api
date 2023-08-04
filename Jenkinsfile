@@ -93,7 +93,7 @@ pipeline {
     }*/
 }
 
-def getJarName() {
+/*def getJarName() {
     def jarName = getName() + '-' + getVersion() + '.jar'
     echo "jarName: ${jarName}"
     return  jarName
@@ -114,4 +114,4 @@ def updateContainerDefinitionJsonWithImageVersion() {
     containerDefinitionJson[0]['image'] = "${AWS_ECR_URL}:${POM_VERSION}".inspect()
     echo "task definiton json: ${containerDefinitionJson}"
     writeJSON file: AWS_ECS_TASK_DEFINITION_PATH, json: containerDefinitionJson
-}
+}*/
