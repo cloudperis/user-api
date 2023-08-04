@@ -43,8 +43,8 @@ pipeline {
                        sh "docker build -t many --build-arg JAR_FILE=${JAR_NAME} ."
                     }
                 }
-            }
-        }
+            
+        
 
         stage('Push image to ECR') {
             steps {
