@@ -78,6 +78,7 @@ pipeline {
 
     post {
         always {
+            steps{
             script{
             withCredentials([string(credentialsId: 'AWS_REPOSITORY_URL_SECRET', variable: 'AWS_ECR_URL')]) {
                 junit allowEmptyResults: true, testResults: 'target/surfire-reports/*.xml'
@@ -87,6 +88,7 @@ pipeline {
                 sh "docker rmi ${AWS_ECR_URL}:${POM_VERSION}"
             }
             }
+            }  
         }
     }
 }
