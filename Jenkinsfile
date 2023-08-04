@@ -16,8 +16,8 @@ pipeline {
     }
 
     environment {
-        //POM_VERSION = getVersion()
-        //JAR_NAME = getJarName()
+        POM_VERSION = '4.0.0'
+        JAR_NAME = 'target/*.jar'
         AWS_ECR_REGION = 'us-east-1'
         AWS_ECS_SERVICE = 'api-service'
         AWS_ECS_TASK_DEFINITION = 'api-dev-td'
