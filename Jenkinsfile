@@ -40,11 +40,13 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                       sh "docker build -t many --build-arg JAR_FILE=${JAR_NAME} ."
+                withCredentials([string(credentialsId: 'AWS_REPOSITORY_URL_SECRET', variable: 'AWS_ECR_URL')]) {
+                    script {
+                        docker.build("${AWS_ECR_URL}:${POM_VERSION}", "--build-arg JAR_FILE=${JAR_NAME} .")
                     }
                 }
-            
-        
+            }
+        }
 
         stage('Push image to ECR') {
             steps {
