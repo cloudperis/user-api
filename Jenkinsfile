@@ -19,13 +19,13 @@ pipeline {
         POM_VERSION = '4.0.0'
         JAR_NAME = '*.jar'
         AWS_ECR_REGION = 'us-east-2'
-        AWS_ECS_SERVICE = 'api-service'
-        AWS_ECS_TASK_DEFINITION = 'api-dev-td'
+        AWS_ECS_SERVICE = 'ch-service'
+        AWS_ECS_TASK_DEFINITION = 'ch-dev-user-api-taskdefinition'
         AWS_ECS_COMPATIBILITY = 'FARGATE'
         AWS_ECS_NETWORK_MODE = 'awsvpc'
         AWS_ECS_CPU = '256'
         AWS_ECS_MEMORY = '512'
-        AWS_ECS_CLUSTER = 'api-dev'
+        AWS_ECS_CLUSTER = 'ch-dev'
         AWS_ECS_TASK_DEFINITION_PATH = './ecs/container-definition-update-image.json'
     }
 
