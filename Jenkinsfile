@@ -18,7 +18,7 @@ pipeline {
     environment {
         POM_VERSION = '4.0.0'
         JAR_NAME = '*.jar'
-        AWS_ECR_REGION = 'us-east-1'
+        AWS_ECR_REGION = 'us-east-2'
         AWS_ECS_SERVICE = 'api-service'
         AWS_ECS_TASK_DEFINITION = 'api-dev-td'
         AWS_ECS_COMPATIBILITY = 'FARGATE'
