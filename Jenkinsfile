@@ -16,8 +16,8 @@ pipeline {
     }
 
     environment {
-        POM_VERSION = '4.0.0'
-        JAR_NAME = '*.jar'
+        POM_VERSION = getVersion()
+        JAR_NAME = getJarName()
         AWS_ECR_REGION = 'us-east-2'
         AWS_ECS_SERVICE = 'ch-service'
         AWS_ECS_TASK_DEFINITION = 'ch-dev-user-api-taskdefinition-1'
@@ -90,7 +90,7 @@ pipeline {
     }
 }
 
-/*def getJarName() {
+def getJarName() {
     def jarName = getName() + '-' + getVersion() + '.jar'
     echo "jarName: ${jarName}"
     return  jarName
@@ -104,7 +104,7 @@ def getVersion() {
 def getName() {
     def pom = readMavenPom file: './pom.xml'
     return pom.name
-}*/
+}
 
 def updateContainerDefinitionJsonWithImageVersion() {
     def containerDefinitionJson = readJSON file: AWS_ECS_TASK_DEFINITION_PATH, returnPojo: true
