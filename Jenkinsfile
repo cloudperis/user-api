@@ -20,7 +20,7 @@ pipeline {
         JAR_NAME = '*.jar'
         AWS_ECR_REGION = 'us-east-2'
         AWS_ECS_SERVICE = 'ch-service'
-        AWS_ECS_TASK_DEFINITION = 'ch-dev-user-api-taskdefinition'
+        AWS_ECS_TASK_DEFINITION = 'ch-dev-user-api-taskdefinition-1'
         AWS_ECS_COMPATIBILITY = 'FARGATE'
         AWS_ECS_NETWORK_MODE = 'awsvpc'
         AWS_ECS_CPU = '256'
