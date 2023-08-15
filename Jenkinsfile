@@ -98,8 +98,7 @@ def getJarName() {
 
 def getVersion() {
     def pom = readMavenPom file: './pom.xml'
-    pm = pom.version.minus("-SNAPSHOT")
-    return pm
+    return pom.version
 }
 
 def getName() {
