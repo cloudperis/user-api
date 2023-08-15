@@ -16,7 +16,7 @@ pipeline {
     }
 
     environment {
-        POM_VERSION = getVersion()
+        POM_VERSION = '2.0.0'
         JAR_NAME = getJarName()
         AWS_ECR_REGION = 'us-east-2'
         AWS_ECS_SERVICE = 'ch-service'
