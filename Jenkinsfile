@@ -16,7 +16,7 @@ pipeline {
     }
 
     environment {
-        POM_VERSION = '2.0.0'
+        POM_VERSION = getVersion()
         JAR_NAME = getJarName()
         AWS_ECR_REGION = 'us-east-2'
         AWS_ECS_SERVICE = 'ch-service'
@@ -98,7 +98,8 @@ def getJarName() {
 
 def getVersion() {
     def pom = readMavenPom file: './pom.xml'
-    return pom.version
+    pm = pom.version.minus("-SNAPSHOT")
+    return pm
 }
 
 def getName() {
