@@ -20,14 +20,14 @@ pipeline {
         JAR_NAME = getJarName()
         AWS_ECR_REGION = 'us-east-2'
         AWS_ECS_SERVICE = 'ch-service'
-        AWS_ECS_TASK_DEFINITION = 'ch-dev-user-api-taskdefinition-1'
+        AWS_ECS_TASK_DEFINITION = 'ch-dev-user-api-taskdefinition'
         AWS_ECS_COMPATIBILITY = 'FARGATE'
         AWS_ECS_NETWORK_MODE = 'awsvpc'
         AWS_ECS_CPU = '1024'
         AWS_ECS_MEMORY = '3072'
         AWS_ECS_CLUSTER = 'ch-dev'
         AWS_ECS_EXECUTION_ROL = 'arn:aws:iam::987932722332:role/ecsTaskExecutionRole'
-        AWS_ECR_URL = '987932722332.dkr.ecr.us-east-2.amazonaws.com/seun-project-repo'
+        AWS_ECR_URL = '987932722332.dkr.ecr.us-east-2.amazonaws.com/ch-dev-user-api-repository'
         AWS_ECS_TASK_DEFINITION_PATH = './ecs/container-definition-update-image.json'
     }
 
@@ -64,7 +64,7 @@ pipeline {
             }
         }
 
-        stage('Deploy in ECS') {
+        /*stage('Deploy in ECS') {
             steps {
                 withCredentials([[
                       $class: 'AmazonWebServicesCredentialsBinding',
@@ -81,7 +81,7 @@ pipeline {
                     }
                 }
             }
-        }
+        }*/
     }
 
     post {
