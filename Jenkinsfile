@@ -64,7 +64,7 @@ pipeline {
             }
         }
 
-        /*stage('Deploy in ECS') {
+        stage('Deploy in ECS') {
             steps {
                 withCredentials([[
                       $class: 'AmazonWebServicesCredentialsBinding',
@@ -81,7 +81,7 @@ pipeline {
                     }
                 }
             }
-        }*/
+        }
     }
 
     post {
