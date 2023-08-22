@@ -43,7 +43,7 @@
                 "valueFrom": "ch-dev-user-db-username"
             },
             {
-                "name": "SPRING_DATASOURCE_PASSWOR",
+                "name": "SPRING_DATASOURCE_PASSWORD",
                 "valueFrom": "ch-dev-user-db-password"
             }
         ],

@@ -19,9 +19,9 @@ spring:
      INDENT_OUTPUT: true
      WRITE_DATES_AS_TIMESTAMPS: false
   datasource:
-    url: jdbc:mysql://localhost:3306/fargate
-    username: root
-    password: mysql
+    url: ch-user-dev-database.cyc17vqvbupx.us-east-2.rds.amazonaws.com
+    username: seun
+    password: Bode101!!
   jpa:
     hibernate:
       ddl-auto: validate
