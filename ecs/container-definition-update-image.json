@@ -1,7 +1,7 @@
 [
     {
         "name": "api-dev",
-        "image": "987932722332.dkr.ecr.us-east-2.amazonaws.com/seun-project-repo",
+        "image": "987932722332.dkr.ecr.us-east-2.amazonaws.com/ch-dev-user-api-repository",
         "cpu": 1024,
         "memory": 3072,
         "memoryReservation": 1024,
